@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>لوحة تحكم رستورانت – Decap CMS</title>
-  <style>
-    body { margin: 0; font-family: 'Cairo', sans-serif; }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>لوحة تحكم</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Netlify Identity Widget - required for git-gateway authentication -->
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Decap CMS - automatically loads admin/config.yml -->
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
   <script src="https://unpkg.com/decap-cms@3.1.0/dist/decap-cms.js"></script>
+
 </body>
 </html>
