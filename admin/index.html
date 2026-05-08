@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم رستورانت – Decap CMS</title>
+  <style>
+    body { margin: 0; font-family: 'Cairo', sans-serif; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script>
+    // Configure Decap CMS to use Arabic RTL
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Initialize Decap CMS with custom config
+    CMS.init({
+      config: {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main'
+        },
+        locale: 'ar',
+        media_folder: 'assets/images',
+        public_folder: 'assets/images',
+        collections: [
+          {
+            name: 'menu',
+            label: 'قائمة الطعام',
+            files: [
+              {
+                file: 'data/menu.json',
+                name: 'menu_data',
+                label: 'بيانات القائمة',
+                fields: [
+                  {
+                    name: 'categories',
+                    label: 'الفئات',
+                    widget: 'list',
+                    required: true
+                  },
+                  {
+                    name: 'items',
+                    label: 'عناصر القائمة',
+                    widget: 'list',
+                    fields: [
+                      { name: 'id', label: 'المعرف', widget: 'number', required: true },
+                      { name: 'name', label: 'اسم الطبق', widget: 'string', required: true },
+                      { name: 'category', label: 'الفئة', widget: 'string', required: true },
+                      { name: 'description', label: 'الوصف', widget: 'text', required: true },
+                      { name: 'price', label: 'السعر', widget: 'number', required: true, value_type: 'decimal' },
+                      { name: 'image', label: 'صورة الطبق', widget: 'image', required: false },
+                      { name: 'tags', label: 'الوسوم', widget: 'list', required: false },
+                      { name: 'available', label: 'متاح', widget: 'boolean', default: true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>

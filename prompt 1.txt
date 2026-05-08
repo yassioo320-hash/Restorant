@@ -1,0 +1,57 @@
+Build a professional Arabic restaurant menu website from scratch using only:
+- HTML
+- CSS
+- Vanilla JavaScript
+- JSON data
+- Decap CMS for admin editing
+
+Project goals:
+- The website must be fully responsive.
+- Arabic language, RTL layout.
+- Modern, premium, elegant, and visually attractive.
+- The menu must be data-driven from JSON, not hardcoded in HTML.
+- The public site is for viewing only.
+- The admin panel should allow editing menu content without changing the core code.
+
+First, create the full project structure and data architecture.
+
+Required project structure:
+- index.html
+- styles.css
+- app.js
+- data/menu.json
+- admin/index.html
+- admin/config.yml
+- assets/images/
+- optional pages or components if needed
+
+Define menu categories clearly. The site must support at least:
+- Appetizers
+- Main Courses
+- Sandwiches
+- Burgers
+- Pizza
+- Pasta
+- Salads
+- Drinks
+- Desserts
+- Breakfast
+- Kids Meals
+- Specials
+
+Data model requirements:
+Each menu item must include:
+- id
+- name
+- category
+- description
+- price
+- image
+- optional tags
+- optional availability status
+
+Create the JSON structure in a clean way so it can be edited easily later from the admin panel.
+
+Do not build the full UI yet.
+Only prepare the foundation, file structure, and JSON data model.
+Then explain what was created and wait for the next step.

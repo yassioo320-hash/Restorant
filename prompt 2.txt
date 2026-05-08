@@ -1,0 +1,59 @@
+Now build the public-facing restaurant menu website UI.
+
+Design requirements:
+- Very modern, premium, and elegant look
+- Arabic RTL layout
+- Mobile-first responsive design
+- Smooth animations and transitions
+- Clean spacing, soft shadows, rounded cards, and attractive typography
+- The design should feel high-end and suitable for a real restaurant brand
+- Use a strong visual hierarchy
+- Make the menu look luxurious and easy to browse
+
+UI requirements:
+1) Home page should include:
+- Hero section with restaurant name, short tagline, and a beautiful intro
+- Featured categories section
+- Search bar for menu items
+- Category filter tabs or buttons
+- Elegant section headings
+- A polished footer
+
+2) Menu display:
+- Show items as professional cards
+- Each card must include:
+  - food image
+  - item name
+  - short description
+  - price
+  - optional badge if featured or spicy or new
+- Cards must look consistent and premium
+- Use a nice grid layout on desktop and stacked layout on mobile
+- Add hover effects and subtle motion
+
+3) Category pages or category sections:
+- Each category must have its own section or page
+- The user should be able to browse:
+  - appetizers
+  - main dishes
+  - drinks
+  - desserts
+  - and all other categories
+- Each category should feel like a separate organized menu section
+
+4) Animations:
+- Smooth fade-in on load
+- Subtle card hover animation
+- Smooth filter switching
+- Use tasteful motion only, not excessive
+- The site should feel modern and alive
+
+5) Code requirements:
+- Keep the code clean and well-commented
+- Use JavaScript to load data from JSON dynamically
+- Do not hardcode menu items in HTML
+- Keep everything easy to extend later
+- Make the UI polished enough for a real restaurant business
+
+Build the full frontend now.
+After that, show me exactly how the pages and cards are structured.

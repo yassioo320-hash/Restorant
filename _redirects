@@ -1,0 +1,2 @@
+# Netlify redirects for Decap CMS
+/admin/*  /admin/index.html  200

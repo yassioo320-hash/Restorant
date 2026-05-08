@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "decap-server": "^3.7.0"
+  }
+}

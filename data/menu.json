@@ -1,0 +1,158 @@
+{
+  "categories": [
+    "المقبلات",
+    "الأطباق الرئيسية",
+    "السندويتشات",
+    "البرجر",
+    "البيتزا",
+    "الباستا",
+    "السلطات",
+    "المشروبات",
+    "الحلويات",
+    "الإفطار",
+    "وجبات الأطفال",
+    "الأطباق الخاصة"
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "حمص بالطحينة",
+      "category": "المقبلات",
+      "description": "حمص كريمي مع طحينة، يقدم مع خبز بيتا دافئ",
+      "price": 12.99,
+      "image": "assets/images/appetizers/hummus.jpg",
+      "tags": ["vegetarian", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "متبل باذنجان",
+      "category": "المقبلات",
+      "description": "متبل باذنجان مشوي مع ثوم وليمون",
+      "price": 14.99,
+      "image": "assets/images/appetizers/baba-ganoush.jpg",
+      "tags": ["vegetarian", "vegan"],
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "شيش طاووق",
+      "category": "الأطباق الرئيسية",
+      "description": "قطع دجاج متبلة مشوية، تقدم مع أرز وبطاطا",
+      "price": 32.99,
+      "image": "assets/images/main-courses/shish-tawook.jpg",
+      "tags": ["grilled", "popular"],
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "كسكس بالخضار",
+      "category": "الأطباق الرئيسية",
+      "description": "كسكس مغربي مع خضروات موسمية ولحم ضأن",
+      "price": 38.99,
+      "image": "assets/images/main-courses/couscous.jpg",
+      "tags": ["traditional"],
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "ساندويتش شاورما دجاج",
+      "category": "السندويتشات",
+      "description": "شاورما دجاج مع ثومية وخضروات في خبز عربي",
+      "price": 18.99,
+      "image": "assets/images/sandwiches/chicken-shawarma.jpg",
+      "tags": ["best-seller"],
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "برجر لحم فاخر",
+      "category": "البرجر",
+      "description": "برجر لحم بقري 200 جرام مع جبن شيدر وصلصة خاصة",
+      "price": 28.99,
+      "image": "assets/images/burgers/premium-beef.jpg",
+      "tags": ["premium", "popular"],
+      "available": true
+    },
+    {
+      "id": 7,
+      "name": "بيتزا مارجريتا",
+      "category": "البيتزا",
+      "description": "بيتزا مع صلصة طماطم وجبن موزاريلا طازجة",
+      "price": 24.99,
+      "image": "assets/images/pizza/margherita.jpg",
+      "tags": ["vegetarian"],
+      "available": true
+    },
+    {
+      "id": 8,
+      "name": "باستا كاربونارا",
+      "category": "الباستا",
+      "description": "باستا مع صلصة كاربونارا وبيكون ولبن رومي",
+      "price": 26.99,
+      "image": "assets/images/pasta/carbonara.jpg",
+      "tags": ["creamy"],
+      "available": true
+    },
+    {
+      "id": 9,
+      "name": "سلطة يونانية",
+      "category": "السلطات",
+      "description": "خضروات طازجة مع جبن فتي وزيتون وزيت زيتون",
+      "price": 16.99,
+      "image": "assets/images/salads/greek.jpg",
+      "tags": ["vegetarian", "healthy"],
+      "available": true
+    },
+    {
+      "id": 10,
+      "name": "عصير ليمون نعناع",
+      "category": "المشروبات",
+      "description": "عصير ليمون طازج مع نعناع وبسيلي",
+      "price": 8.99,
+      "image": "assets/images/drinks/lemon-mint.jpg",
+      "tags": ["refreshing", "sugar-free-option"],
+      "available": true
+    },
+    {
+      "id": 11,
+      "name": "كنافة بالجبن",
+      "category": "الحلويات",
+      "description": "كنافة كلاسيكية مع جبن نابلسي دافئ",
+      "price": 19.99,
+      "image": "assets/images/desserts/kanafeh.jpg",
+      "tags": ["traditional", "hot"],
+      "available": true
+    },
+    {
+      "id": 12,
+      "name": "بيض شكشوكة",
+      "category": "الإفطار",
+      "description": "بيض مطهو مع طماطم وبصل وفلفل، يقدم مع خبز",
+      "price": 22.99,
+      "image": "assets/images/breakfast/shakshuka.jpg",
+      "tags": ["hearty", "spicy-option"],
+      "available": true
+    },
+    {
+      "id": 13,
+      "name": "وجبة أطفال دجاج",
+      "category": "وجبات الأطفال",
+      "description": "قطع دجاج مقلي مع بطاطا مقرمشة وعصير صغير",
+      "price": 24.99,
+      "image": "assets/images/kids-meals/chicken-nuggets.jpg",
+      "tags": ["kids", "fun"],
+      "available": true
+    },
+    {
+      "id": 14,
+      "name": "سمك مشوي مع صلصة ليمون",
+      "category": "الأطباق الخاصة",
+      "description": "سمك قاروص مشوي طازج مع صلصة ليمون وأعشاب",
+      "price": 42.99,
+      "image": "assets/images/specials/grilled-fish.jpg",
+      "tags": ["chef-special", "healthy"],
+      "available": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.dbgit
+
+# IDE
+.vscode/
+.idea/
+.txt/
+
+# Temporary
+*.tmp
+*.log

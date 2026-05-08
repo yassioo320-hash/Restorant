@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مطعم رستورانت - اكتشف أشهى الأطباق المعدة بعناية فائقة بنكهة التراث ولمسة عصرية">
+  <meta name="theme-color" content="#2c1810">
+  <title>مطعم ملك السوري | قائمة الطعام</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">م</span>
+        ملك السوري
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="navigation">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#menu">القائمة</a></li>
+        <li><a href="#categories">الأصناف</a></li>
+        <!-- <li><a href="admin/" class="nav-admin">لوحة التحكم</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- القسم الرئيسي -->
+  <section class="hero" id="home">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-pre-title">مرحباً بكم في</p>
+      <h1 class="hero-title">ملك السوري</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">نكهة التراث بلمسة عصرية</p>
+      <p class="hero-desc">نقدم لكم أجود المأكولات بأجود المكونات الطازجة وبأيدي أمهر الطهاة</p>
+      <div class="hero-actions">
+        <a href="#menu" class="hero-btn primary">تصفح القائمة</a>
+        <a href="#categories" class="hero-btn secondary">الأصناف</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>اكتشف المزيد</span>
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    </div>
+  </section>
+
+  <!-- فاصل القسم -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 Q300,60 600,30 T1200,30 L1200,60 L0,60 Z" fill="var(--bg)"/></svg>
+  </div>
+
+  <!-- القائمة -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">قائمتنا</span>
+        <h2 class="section-title">اكتشف أشهى الأطباق</h2>
+        <p class="section-subtitle">اختر من بين مجموعتنا الواسعة من الأطباق المحضرة بعناية فائقة</p>
+      </div>
+
+      <div class="search-wrapper">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2"/></svg>
+          <input type="text" id="searchInput" placeholder="ابحث عن طبق، فئة، أو وصف..." aria-label="ابحث في قائمة الطعام">
+          <button class="search-clear" id="searchClear" aria-label="مسح البحث" style="display:none;">×</button>
+        </div>
+      </div>
+
+      <div class="category-tabs-wrapper">
+        <div class="category-tabs" id="categoryTabs" role="tablist">
+          <button class="tab active" data-category="all" role="tab">الكل</button>
+        </div>
+      </div>
+
+      <!-- حالة التحميل -->
+      <div class="loading-state" id="loadingState">
+        <div class="loading-spinner"></div>
+        <p>جاري تحميل القائمة...</p>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+
+      <div class="no-results" id="noResults" style="display:none;">
+        <div class="empty-state">
+          <div class="empty-icon">🔍</div>
+          <h3>لا توجد نتائج</h3>
+          <p>لم نعثر على أطباق تطابق بحثك. جرب كلمات مختلفة.</p>
+          <button class="empty-btn" id="clearSearch">مسح البحث</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- فاصل القسم -->
+  <div class="section-divider flip">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 Q300,60 600,30 T1200,30 L1200,60 L0,60 Z" fill="var(--bg-section)"/></svg>
+  </div>
+
+  <!-- الفئات -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">تصفح حسب</span>
+        <h2 class="section-title">أصنافنا</h2>
+        <p class="section-subtitle">اختر صنفك المفضل واكتشف ما نقدمه لك</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid"></div>
+    </div>
+  </section>
+
+  <!-- فاصل القسم -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 Q300,60 600,30 T1200,30 L1200,60 L0,60 Z" fill="var(--bg)"/></svg>
+  </div>
+
+  <!-- التذييل -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3><span class="logo-icon">ق</span> رستورانت</h3>
+        <p class="footer-tagline">نكهة التراث بلمسة عصرية</p>
+        <p class="footer-about">نحن مطعم يجمع بين أصالة الماضي وحداثة الحاضر، نقدم أجود المأكولات بأفضل المكونات.</p>
+      </div>
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#menu">القائمة</a></li>
+          <li><a href="#categories">الأصناف</a></li>
+          <li><a href="admin/">لوحة التحكم</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>تواصل معنا</h4>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <span>0123 456 789</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <span>info@restorant.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>شارع الرئيسي، المدينة</span>
+        </div>
+        <div class="footer-hours">
+          <h5>ساعات العمل</h5>
+          <p>السبت - الخميس: 12:00 م - 11:00 م</p>
+          <p>الجمعة: 2:00 م - 12:00 ص</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 مطعم رستورانت. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>

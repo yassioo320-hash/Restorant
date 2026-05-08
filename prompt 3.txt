@@ -1,0 +1,36 @@
+Now add a working admin panel using Decap CMS.
+
+Requirements:
+- Create an /admin page
+- Admin must be able to edit the menu without touching code
+- Content should be saved into the JSON data file in the repository
+- The admin panel must support:
+  - adding categories
+  - editing categories
+  - deleting categories
+  - adding menu items
+  - editing menu items
+  - deleting menu items
+  - changing prices
+  - changing descriptions
+  - uploading images
+  - marking items as featured/new/spicy/hidden if needed
+
+Technical requirements:
+- Use Decap CMS correctly
+- Configure a file-based collection for the menu JSON
+- Make the structure compatible with Git-based editing
+- Ensure the admin UI is simple and easy for a non-technical user
+
+Also prepare the project for free deployment.
+If needed, configure it for Netlify because Decap CMS needs a working auth/backend setup.
+
+Deliver:
+- admin/index.html
+- admin/config.yml
+- any required adjustments in the main app
+- clear admin workflow
+- clear explanation of how editing works from /admin
+
+Do not remove the clean design from the public site.
+Integrate the admin setup without breaking the frontend.

@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+locale: ar
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+collections:
+  - name: "menu"
+    label: "قائمة الطعام"
+    files:
+      - file: "data/menu.json"
+        name: "menu_data"
+        label: "بيانات القائمة"
+        description: "إدارة الفئات والأصناف - تعديل، إضافة، وحذف"
+        fields:
+          - name: "categories"
+            label: "الفئات"
+            widget: "list"
+            required: true
+            hint: "أضف فئات جديدة أو احذف الموجودة (مثال: Appetizers, Main Courses)"
+          - name: "items"
+            label: "عناصر القائمة"
+            widget: "list"
+            description: "أضف، عدل، أو احذف أصناف القائمة"
+            fields:
+              - { name: "id", label: "المعرف", widget: "number", required: true, hint: "رقم فريد (مثال: 1، 2، 3)" }
+              - { name: "name", label: "اسم الطبق", widget: "string", required: true, hint: "الاسم بالعربية" }
+              - { name: "category", label: "الفئة", widget: "string", required: true, hint: "اكتب اسم الفئة بالإنجليزية (Appetizers, Main Courses, إلخ)" }
+              - { name: "description", label: "الوصف", widget: "text", required: true, hint: "وصف مختصر للطبق" }
+              - { name: "price", label: "السعر", widget: "number", required: true, value_type: "decimal", hint: "السعر بالدينار" }
+              - { name: "image", label: "صورة الطبق", widget: "image", required: false }
+              - name: "tags"
+                label: "الوسوم"
+                widget: "list"
+                required: false
+                hint: "أضف وسوم مثل: popular، new، spicy، best-seller، chef-special"
+              - { name: "available", label: "متاح في القائمة", widget: "boolean", default: true }
