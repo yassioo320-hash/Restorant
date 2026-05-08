@@ -11,12 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Netlify Identity Widget - required for git-gateway authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <script>
     // Configure Decap CMS to use Arabic RTL
     window.CMS_MANUAL_INIT = true;
   </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    // Initialize Netlify Identity
+    if (window.netlifyIdentity) {
+      netlifyIdentity.on('init', user => {
+        if (!user) {
+          netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+      netlifyIdentity.init();
+    }
+
     // Initialize Decap CMS with custom config
     CMS.init({
       config: {

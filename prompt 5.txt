@@ -1,0 +1,41 @@
+I deployed a static website on Netlify and enabled Netlify Identity, but I have a problem:
+
+ISSUE:
+When I try to access /admin or /netlify/identity, I get redirected to the homepage or I get a 401 error saying:
+"This endpoint requires a Bearer token"
+
+WHAT I DID:
+- I enabled Netlify Identity in Netlify dashboard
+- I invited my email as an admin user and accepted the invite
+- I created a password successfully
+- My site is deployed and working on Netlify
+
+BUT:
+- /admin does not show a login page
+- /netlify/identity gives 401 or redirects
+- There is no authentication flow working
+
+TECH STACK:
+- Static frontend (HTML / React)
+- Hosted on Netlify
+- Using Netlify Identity for authentication
+
+TASK:
+1. Inspect my project structure
+2. Fix Netlify Identity authentication setup
+3. Ensure login works properly for /admin or /netlify/identity
+4. Add missing Identity widget if needed:
+   - netlify-identity-widget for React or HTML
+5. Fix redirect issues after login
+6. Ensure admin page is protected and only accessible after authentication
+7. Make sure the Identity instance is initialized correctly on app load
+8. If needed, configure redirect settings in Netlify or in code
+
+IMPORTANT:
+- Do NOT assume backend exists (this is static site only)
+- Use proper Netlify Identity initialization
+- Ensure correct script inclusion or npm package usage depending on framework
+- Explain what was wrong and how you fixed it briefly after applying changes
+
+Goal:
+Make Netlify Identity login fully working so I can access admin panel securely.
