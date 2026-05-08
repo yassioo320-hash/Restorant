@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>لوحة تحكم</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,13 +13,21 @@
 
   <script>
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
+
+      window.netlifyIdentity.init();
+
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
       });
+
+      window.netlifyIdentity.on("logout", () => {
+        document.location.href = "/";
+      });
+
+      window.netlifyIdentity.on("recovery", () => {
+        console.log("Recovery mode");
+      });
+
     }
   </script>
 
